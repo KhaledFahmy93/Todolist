@@ -1,0 +1,81 @@
+<html>
+   <head>
+      <link href="style.css" rel="stylesheet"/>
+   
+       
+      <title> To do list </title>
+      <meta charset="utf-8">
+     
+    
+      
+   </head>
+   <body>
+        <section class="todoapp">
+                <header class="header">
+                  <h1>todos</h1>
+                  
+                  <input class="new-todo"
+                    autocomplete="off"
+                    placeholder="What needs to be " v-on:keyup.enter="newItem($event)" v-bind='newvalue' >
+
+                </header>
+                <section class="main" >
+                  <input class="toggle-all" id="toggle-all" type="checkbox">
+                  <label for="toggle-all">Mark all as complete</label>
+                  
+                  <ul class="todo-list" id='lists'>
+                        <!-- <to-do-lists v-for="list in lists" v-bind:key="list.id"v-bind:id="list.id"
+                                v-bind:task="list.task" v-bind:done="list.done">
+                        </to-do-lists>  -->   
+                        <li class="todo">
+                            <div class="view">
+                              <input class="toggle" type="checkbox">
+                              <label>title</label>
+                              <button class="destroy"></button>
+                            </div>
+                            <input class="edit" type="text">
+                        </li>
+
+
+                          <li class="todo">
+                              <div class="view">
+                                <input class="toggle" type="checkbox">
+                                <label>title</label>
+                                <button class="destroy"></button>
+                              </div>
+                              <input class="edit" type="text">
+                          </li>
+                  </ul>
+                </section>
+                <footer class="footer">
+                  <span class="todo-count">
+                    <strong>1</strong> item left
+                  </span>
+                  <ul class="filters">
+                    <li><a href="#" class="selected" v-on:click='tasks()'>All</a></li>
+                    <li><a href="#" v-on:click='notdone()' >not Completed</a></li>
+                    <li><a href="#" v-on:click='done()'>Completed</a></li>
+                  </ul>
+                  <button class="clear-completed">
+                    Clear completed
+                  </button>
+                </footer>
+        </section>
+              <footer class="info">
+                <p>Double-click to edit a todo</p>
+              </footer>
+        
+
+
+
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.common.js' ></script>
+      <script type = "text/javascript" src = "vue_component.js"></script>
+      <script type = "text/javascript" src = "my-new-comp.js"></script>
+   </body>
+</html>
+
+
+
+
+
+
